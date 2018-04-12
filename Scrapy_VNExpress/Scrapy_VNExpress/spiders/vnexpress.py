@@ -17,5 +17,8 @@ class VnexpressSpider(Spider):
                 'h3[@class="title_news"]/a[1]/text()').extract()[0]
             item['url'] = tintuc.xpath(
                 'h3[@class="title_news"]/a[1]/@href').extract()[0]
+            item['content'] = tintuc.xpath(
+                'h4[@class="description"]/text()').extract()[0]
+
             yield item
 

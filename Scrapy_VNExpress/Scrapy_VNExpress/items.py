@@ -14,8 +14,3 @@ class ScrapyVnexpressItem(scrapy.Item):
     title = scrapy.Field()
     url = scrapy.Field()
     content = scrapy.Field()
-    author = scrapy.Field()
-    writtenOn = scrapy.Field()
-    tags = scrapy.Field()
-    catid = scrapy.Field()
-    postid = scrapy.Field()
