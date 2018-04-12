@@ -15,5 +15,7 @@ class VnexpressSpider(Spider):
             item = ScrapyVnexpressItem()
             item['title'] = tintuc.xpath(
                 'h3[@class="title_news"]/a[1]/text()').extract()[0]
+            item['url'] = tintuc.xpath(
+                'h3[@class="title_news"]/a[1]/@href').extract()[0]
             yield item
 
